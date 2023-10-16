@@ -6,7 +6,7 @@
 }
 .details .card {
     width: 22.75rem !important;
-    height: 29.625rem !important;
+    min-height: 37.625rem !important;
     border: none !important;
     
 }
@@ -18,7 +18,7 @@
  }
 .details .text-wrapper {
     width: 58rem !important;
-    height: 29.625rem !important;
+    height: 37.625rem !important;
 
 }
 h4{
@@ -90,6 +90,9 @@ border-radius: 1.5625rem;
 border: 1px solid #FFE353;
 padding: 8px 40px;
 background-color: transparent;
+display: block;
+width: 20%;
+margin-top: 20px;
 }
 .btn-website a {
 text-decoration: none;
