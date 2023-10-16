@@ -1,28 +1,18 @@
 <div class="movie-details container">
   <div class="row">
     <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="../../assets/photo.png"
-        alt="Card image cap"
-      />
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}" alt="Card image cap" />
     </div>
-
     <div class="text-wrapper">
-      <h4>Black Widow</h4>
-      <span>Sep 25, 2017</span>
+      <h4>{{movieDetails.title}}</h4>
+      <span>{{movieDetails.release_date}}</span>
       <p>
-        Natasha Romanoff, also known as Black Widow, confronts the darker parts
-        of her ledger when a dangerous conspiracy with ties to her past arises.
-        Pursued by a force that will stop at nothing to bring her down, Natasha
-        must deal with her history as a spy and the broken relationships left in
-        her wake long before she became an Avenger.
+     {{movieDetails.overview}}
       </p>
 
       <div>
-        <span>Action</span>
-        <span>Crime</span>
-        <span>Thriller</span>
+        <span></span>
+     
       </div>
 
       <div class="btn-website">
@@ -37,11 +27,7 @@
 
   <div class="row">
     <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="../../assets/photo.png"
-        alt="Card image cap"
-      />
+      <img class="card-img-top" src="../../assets/photo.png" alt="Card image cap" />
     </div>
   </div>
 </div>
