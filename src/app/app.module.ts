@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { MovieAppComponent } from './movie-app/movie-app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, MovieAppComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgbModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
