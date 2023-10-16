@@ -106,3 +106,7 @@ color: #e03c37;
 .card-title {
     font-size: 16px !important;
 }
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}

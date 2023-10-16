@@ -21,10 +21,16 @@
             </h2>
             <div class="movies-show">
                 <div class="movie-card">
-                    <div class="card" style="width: 14rem;"  *ngFor="let movie of AllMovies" >
-                        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="...">
+                    <div class="card" style="width: 14rem;" *ngFor="let movie of AllMovies">
+                        <a href="">
+                            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top"
+                                alt="...">
+
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title" >{{movie.title}}</h5>
+                            <a href="">
+                                <h5 class="card-title">{{movie.title}}</h5>
+                            </a>
                             <h6> Rate <span>{{movie.vote_average}}</span> </h6>
                             <div class="washList">
                                 <p class="card-text">{{movie.release_date}}</p>
@@ -33,10 +39,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-            
+
         </div>
     </div>
 
