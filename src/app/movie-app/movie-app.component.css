@@ -95,6 +95,14 @@ margin-bottom: 40px;
 .card-body {
 padding-left:0 ;}
 
+.card-body h6 {
+    font-size: 16px;
+}
+.card-body h6  span {
+color: #e03c37;
+}
+
+
 .card-title {
     font-size: 16px !important;
 }
