@@ -1,0 +1,89 @@
+
+.search {
+    width: 100%;
+    margin-top: 30px;
+    height: 16rem;
+    background: #f8f8f8;
+    padding: 2.5rem;
+
+}
+
+.search h1 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.19rem;
+
+}
+
+.search p {
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input .btn {
+    border-radius: 0.625rem;
+    background: #FFE353;
+    width: 7.5rem;
+    height: 2.475rem;
+    color: #050505;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.input input {
+    width: 69.3125rem;
+    height: 2.875rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.top{
+    top: 5px !important;
+}
+
+.movie-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Movies  {
+    padding-top: 4rem;
+ 
+}
+
+.Movies h2 {
+    color: #000;
+font-size: 2rem;
+font-weight: 600;
+margin-bottom: 40px;
+}
+
+.card {
+    border: none !important;
+}
+
+.washList{
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+
+.washList p {
+    color : #858585;
+}
+
+.washList a {
+    text-decoration: none;
+    color: #000;
+}
