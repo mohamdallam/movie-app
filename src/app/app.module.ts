@@ -9,9 +9,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
-  declarations: [AppComponent, MovieAppComponent, HeaderComponent],
+  declarations: [AppComponent, MovieAppComponent, HeaderComponent, MovieDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgbModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
