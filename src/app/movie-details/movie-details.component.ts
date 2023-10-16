@@ -12,6 +12,7 @@ import { Movie } from '../interfaces/movie';
 export class MovieDetailsComponent {
 
   movieDetails !: Movie 
+  genres 
   
 
   constructor(private moviesDetailsService: MovieDetailsService ,private activatedRoute: ActivatedRoute) {}
