@@ -3,6 +3,9 @@ import { MovieDetailsService } from '../services/movie-details.service';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../interfaces/movie';
 import { Genres } from '../interfaces/genres';
+import { Details } from '../interfaces/details';
+import { Languages } from '../interfaces/languages';
+import { Companies } from '../interfaces/companies';
 
 
 @Component({
@@ -12,8 +15,10 @@ import { Genres } from '../interfaces/genres';
 })
 export class MovieDetailsComponent {
 
-  movieDetails !: Movie 
+  movieDetails !: Details 
   genres  !: Genres[]
+  languages !: Languages []
+  companies !: Companies 
   
 
   constructor(private moviesDetailsService: MovieDetailsService ,private activatedRoute: ActivatedRoute) {}
@@ -25,7 +30,10 @@ console.log(this.activatedRoute.snapshot.params['id']);
     (this.activatedRoute.snapshot.params['id'])
     .subscribe((data :any) => {this.movieDetails = data
       ,this.genres = data.genres,
-      console.log(this.genres)
+      this.languages = data.spoken_languages,
+      this.companies = data.production_companies
+      console.log(this.companies);
+      
     
   })
   }

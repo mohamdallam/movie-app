@@ -50,13 +50,14 @@ font-weight: 400;
 .generas-parent{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 45%;
+    justify-content: flex-start;
+    max-width: 65%;
     margin: 20px 0;
 
 }
 .generas {
     width: 7rem;
+    margin-right: 25px;
 height: 2.3125rem;
 border-radius: 1.5625rem;
 background: #FFE353;
@@ -82,4 +83,18 @@ padding-left: 10px;
     align-items: center;
     justify-content: space-between;
     width: 40%;
+}
+
+.btn{
+border-radius: 1.5625rem;
+border: 1px solid #FFE353;
+padding: 8px 40px;
+background-color: transparent;
+}
+.btn-website a {
+text-decoration: none;
+color: #000;
+font-size: 1.7rem !important;
+font-weight: 400;
+
 }
