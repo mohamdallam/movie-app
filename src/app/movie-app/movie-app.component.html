@@ -21,12 +21,12 @@
             </h2>
             <div class="movies-show">
                 <div class="movie-card">
-                    <div class="card" style="width: 14rem;" >
-                        <img src="../../assets/photo.png" class="card-img-top" alt="...">
+                    <div class="card" style="width: 14rem;"  *ngFor="let movie of AllMovies" >
+                        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Black Widow </h5>
+                            <h5 class="card-title">{{movie.title}}</h5>
                             <div class="washList">
-                                <p class="card-text">sep 25, 2017</p>
+                                <p class="card-text">{{movie.release_date}}</p>
                                 <a href=""> <i class="fa-regular fa-heart"></i>
                                 </a>
                             </div>
