@@ -57,6 +57,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.movie-card img{
+    width: 12.125rem;
+    height: 18.0625rem;
+}
 .Movies  {
     padding-top: 4rem;
  
@@ -71,6 +75,7 @@ margin-bottom: 40px;
 
 .card {
     border: none !important;
+    height: 25.0625rem !important;
 }
 
 .washList{
@@ -86,4 +91,10 @@ margin-bottom: 40px;
 .washList a {
     text-decoration: none;
     color: #000;
+}
+.card-body {
+padding-left:0 ;}
+
+.card-title {
+    font-size: 16px !important;
 }
