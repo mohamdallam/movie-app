@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MovieDetailsService } from '../services/movie-details.service';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../interfaces/movie';
+import { Genres } from '../interfaces/genres';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Movie } from '../interfaces/movie';
 export class MovieDetailsComponent {
 
   movieDetails !: Movie 
-  genres 
+  genres  !: Genres[]
   
 
   constructor(private moviesDetailsService: MovieDetailsService ,private activatedRoute: ActivatedRoute) {}
@@ -22,7 +23,11 @@ console.log(this.activatedRoute.snapshot.params['id']);
 
     this.moviesDetailsService.getMovieDetails
     (this.activatedRoute.snapshot.params['id'])
-    .subscribe((data :any) =>this.movieDetails = data)
+    .subscribe((data :any) => {this.movieDetails = data
+      ,this.genres = data.genres,
+      console.log(this.genres)
+    
+  })
   }
 
 }
