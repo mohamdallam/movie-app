@@ -65,3 +65,21 @@ padding: 7px 20px;
 font-size: 1rem;
 font-weight: 400;
 }
+.movie-duration{
+    color: #000;
+font-size: 1rem;
+font-weight: 700;
+}
+.movie-duration span{
+    color: #000;
+font-size: .9rem;
+font-weight: 600;
+padding-left: 10px;
+}
+
+.language{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
