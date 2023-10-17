@@ -1,1 +1,20 @@
-<p>watch-list works!</p>
+<div class="container">
+  <div class="row my-5">
+    <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
+      <a [routerLink]="['Movie-Details', movie.id]">
+      <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <p class="card-text">{{ movie.overview }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Vote Average: {{ movie.vote_average }}</li>
+        <li class="list-group-item">Release Date: {{ movie.release_date }}</li>
+      </ul>
+      <div class="card-body">
+        <a [routerLink]="['Movie-Details', movie.id]" class="card-link">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>
