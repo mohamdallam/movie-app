@@ -11,9 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { WatchListComponent } from './watch-list/watch-list.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, MovieAppComponent, HeaderComponent, MovieDetailsComponent, WatchListComponent],
+  declarations: [AppComponent, MovieAppComponent, HeaderComponent, MovieDetailsComponent, WatchListComponent, NotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgbModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
