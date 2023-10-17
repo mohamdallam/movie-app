@@ -39,11 +39,27 @@
 
   <h2>Recommendation</h2>
 
-  <div class="row">
-    <div class="card" style="width: 18rem">
+  <div class="row justify-content-between pb-5">
+    <!-- <div
+      class="card"
+      style="width: 18rem"
+      *ngFor="let recom of movieRecommendation"
+    >
       <img
         class="card-img-top"
-        src="../../assets/photo.png"
+        src="https://image.tmdb.org/t/p/w500/{{ recom.poster_path }}"
+        alt="Card image cap"
+      />
+    </div> -->
+
+    <div
+      class="card border-0"
+      style="width: 12rem"
+      *ngFor="let recom of movieRecommendation.slice(0, 6); let i = index"
+    >
+      <img
+        class="card-img-top"
+        src="https://image.tmdb.org/t/p/w500/{{ recom.poster_path }}"
         alt="Card image cap"
       />
     </div>

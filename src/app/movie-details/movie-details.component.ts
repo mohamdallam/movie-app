@@ -42,6 +42,9 @@ export class MovieDetailsComponent {
 
     this.movieRecommendationService
       .getMovieRecommendation()
-      .subscribe((dataRec: any) => (this.movieRecommendation = dataRec));
+      .subscribe((dataRec: any) => {
+        this.movieRecommendation = dataRec.results;
+        console.log(dataRec);
+      });
   }
 }
