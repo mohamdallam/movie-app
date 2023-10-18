@@ -4,19 +4,23 @@
   justify-content: space-between;
   padding-top: 50px;
 }
+
 .details .card {
   width: 22.75rem !important;
   min-height: 37.625rem !important;
   border: none !important;
 }
+
 .details .card img {
   width: 100% !important;
   height: 100%;
 }
+
 .details .text-wrapper {
   width: 58rem !important;
   height: 37.625rem !important;
 }
+
 h4 {
   color: #000;
   font-size: 3rem;
@@ -28,6 +32,7 @@ h4 {
   font-size: 0.75rem;
   font-weight: 400;
 }
+
 .rate {
   color: #000;
   font-size: 1rem;
@@ -41,6 +46,7 @@ h4 {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
 .generas-parent {
   display: flex;
   align-items: center;
@@ -48,6 +54,7 @@ h4 {
   max-width: 65%;
   margin: 20px 0;
 }
+
 .generas {
   width: 7rem;
   margin-right: 25px;
@@ -59,11 +66,13 @@ h4 {
   font-size: 1rem;
   font-weight: 400;
 }
+
 .movie-duration {
   color: #000;
   font-size: 1rem;
   font-weight: 700;
 }
+
 .movie-duration span {
   color: #000;
   font-size: 0.9rem;
@@ -87,9 +96,28 @@ h4 {
   width: 20%;
   margin-top: 20px;
 }
+
 .btn-website a {
   text-decoration: none;
   color: #000;
   font-size: 1.7rem !important;
+  font-weight: 400;
+}
+
+.recomendition {
+  margin-top: 30px;
+}
+
+.recomendition a {
+  text-decoration: none;
+  color: #000;
+}
+
+.recomendition h6 {
+  margin-top: 30px;
+}
+
+.recomendition h5 {
+  font-size: 14px;
   font-weight: 400;
 }
