@@ -44,8 +44,11 @@
               <div class="washList">
                 <p class="card-text">{{ movie.release_date }}</p>
                 <a href="#" (click)="addToWatchList(movie)">
-                  <img src="../../assets/love_8647296.svg" class="heart"
-                /></a>
+                  <!-- <img src="../../assets/love_8647296.svg" class="heart" *ngIf="!isMovieInWatchList(movie)"/>
+                  <img src="../../assets/love_86472962.svg" class="heart" *ngIf="isMovieInWatchList(movie)"/> -->
+                  
+                  <img [src]="isMovieInWatchList(movie) ? '../../assets/love_86472962.svg' : '../../assets/love_8647296.svg'" class="heart" />
+                </a>
               </div>
             </div>
           </div>

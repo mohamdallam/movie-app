@@ -16,8 +16,8 @@ export class MovieAppComponent {
   constructor(
     private movieService: MovieApiService,
     private router: Router,
-    private route: ActivatedRoute ,
-    public WatchList : WatchListService
+    private route: ActivatedRoute,
+    public watchListService: WatchListService
   ) {}
 
   // ngOnInit() {
@@ -56,7 +56,24 @@ export class MovieAppComponent {
     this.router.navigate(['Product-details', id]);
   }
 
-  addToWatchList(movie : Movie) {
+  addToWatchList(movie: Movie) {
     console.log(movie);
+
+    var isMovieInList =
+      this.watchListService.watchList.filter((x) => x.id === movie.id).length >
+      0;
+
+    if (isMovieInList) {
+      this.watchListService.watchList = this.watchListService.watchList.filter(
+        (x) => x.id !== movie.id
+      );
+    } else {
+      this.watchListService.watchList.push(movie);
+    }
+  }
+
+  isMovieInWatchList(movie: Movie) {
+    return this.watchListService.watchList.filter((x) => x.id === movie.id).length >
+      0;
   }
 }

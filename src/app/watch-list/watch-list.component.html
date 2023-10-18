@@ -1,12 +1,22 @@
 <div class="container">
-  <div class="row my-5">
-    <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
+  <div class="row" *ngIf="watchListService.watchList.length==0">
+    <p>asdasdasd</p>
+  </div>
+  <div class="row my-5" *ngIf="watchListService.watchList.length>0">
+
+    <div class="card" style="width: 18rem;"  *ngFor="let movie of watchListService.watchList ; let i = index">
       <a [routerLink]="['Movie-Details', movie.id]">
       <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="card-img-top" alt="...">
       </a>
       <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
         <p class="card-text">{{ movie.overview }}</p>
+        <a  (click)="removeFromWatchList(i)">
+          <!-- <img src="../../assets/love_8647296.svg" class="heart" *ngIf="!isMovieInWatchList(movie)"/>
+          <img src="../../assets/love_86472962.svg" class="heart" *ngIf="isMovieInWatchList(movie)"/> -->
+          
+          <img src='../../assets/love_8647296.svg'  class="heart" />
+        </a>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Vote Average: {{ movie.vote_average }}</li>
