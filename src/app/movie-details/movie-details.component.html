@@ -1,0 +1,61 @@
+<div class="movie-details container">
+  <div class="row details">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="https://image.tmdb.org/t/p/w500/{{ movieDetails.poster_path }}"
+        alt="Card image cap"
+      />
+    </div>
+    <div class="text-wrapper">
+      <h4>{{ movieDetails.title }}</h4>
+      <p class="date">{{ movieDetails.release_date }}</p>
+      <span class="rate"> Rate ( {{ movieDetails.vote_average }} )</span>
+      <span class="rate"> {{ movieDetails.vote_count }} </span>
+      <p class="movie-details">
+        {{ movieDetails.overview }}
+      </p>
+      <div class="generas-parent">
+        <div *ngFor="let genres of genres">
+          <span class="generas">{{ genres.name }}</span>
+        </div>
+      </div>
+      <div class="language">
+        <p class="movie-duration">
+          Duration: <span>{{ movieDetails.runtime }} Min.</span>
+        </p>
+        <p class="movie-duration">Languages: <span></span></p>
+      </div>
+
+      <a class="btn" href="{{ movieDetails.homepage }}">
+        Website <img src="../../assets/_link 2_.svg" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2>Recommendation</h2>
+
+  <div class="row justify-content-between pb-5">
+
+
+    <div
+      class="card border-0 recomendition"
+      style="width: 13rem"
+      *ngFor="let recom of movieRecommendation.slice(0, 6); let i = index"
+    >
+    <a href="">
+      <img
+        class="card-img-top"
+        src="https://image.tmdb.org/t/p/w500/{{ recom.poster_path }}"
+        alt="Card image cap"
+      />
+
+        <h6>{{recom.title}}</h6>
+        
+      </a>
+      <h5>{{recom.release_date}}</h5>
+    </div>
+  </div>
+</div>

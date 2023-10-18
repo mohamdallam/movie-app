@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h2>Watch list </h2>
+  <div class="row" *ngIf="watchListService.watchList.length==0">
+    <div class="heart">
+      <img src="../../assets/heart-slash.svg" alt="">
+      <h4>No Movies in watch list </h4>
+      <a routerLink="/" >Back to home </a>
+    </div>
+  </div>
+  <div class="row my-5" *ngIf="watchListService.watchList.length>0">
+
+    <div id="card"  *ngFor="let movie of watchListService.watchList ; let i = index">
+      <a [routerLink]="['Movie-Details', movie.id]">
+      <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <h6 class="card-title">{{ movie.release_date }}</h6>
+        <p class="card-text">{{ movie.overview }}</p>
+        <a  (click)="removeFromWatchList(i)">
+          <!-- <img src="../../assets/love_8647296.svg" class="heart" *ngIf="!isMovieInWatchList(movie)"/>
+          <img src="../../assets/love_86472962.svg" class="heart" *ngIf="isMovieInWatchList(movie)"/> -->
+          
+          <img src='../../assets/heart_1102077.svg'  class="heart-active" />
+        </a>
+      </div>
+     
+   
+    </div>
+  </div>
+</div>
