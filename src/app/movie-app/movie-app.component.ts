@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MovieApiService } from '../services/movie-api.service';
 import { Movie } from '../interfaces/movie';
 import { ActivatedRoute, Router } from '@angular/router';
+import { WatchListService } from '../services/watch-list.service';
 
 @Component({
   selector: 'app-movie-app',
@@ -15,7 +16,8 @@ export class MovieAppComponent {
   constructor(
     private movieService: MovieApiService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute ,
+    public WatchList : WatchListService
   ) {}
 
   // ngOnInit() {
@@ -52,5 +54,9 @@ export class MovieAppComponent {
 
   redirectToDetails(id: any) {
     this.router.navigate(['Product-details', id]);
+  }
+
+  addToWatchList(movie : Movie) {
+    console.log(movie);
   }
 }
